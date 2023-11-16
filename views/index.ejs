@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <button><a href="/">volver al home</a></button>
+        <h1>Formulario de registro</h1>
+        <form action="http://localhost:3001/registro" method="post">
+            <section>
+                <label for="id">id:</label>
+                <input type="text" name="id" id="id" required>
+            </section>
+
+            <section>
+                <label for="Nombre">Nombre:</label>
+                <input type="text" name="nombre" id="Nombre" required>
+            </section>
+
+            <section>
+                <label for="Correo">Correo:</label>
+                <input type="text" name="correo" id="Correo" required>
+
+            </section>
+
+            <section>
+                <label for="Password">Password:</label>
+                <input type="password" name="pass" id="Password" required>
+            </section>
+            <input type="submit" value="Registrar" id="registro">
+        </form>
+    </main>
+</body>
+
+</html>

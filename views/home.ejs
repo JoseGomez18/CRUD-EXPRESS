@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/registrar">Registro</a></li>
+            <li><a href="/iniciar-sesion">Inciar sesión</a></li>
+            <li><a href="/crear-pelicula">Crear Pelicula</a></li>
+            <li><a href="/modificar-pelicula">Modificar pelicula</a></li>
+            <li>
+                <a href="">
+                    CORREO: <%= nombre %>
+                </a>
+            </li>
+            <li><a href="/cerrar-sesion">Cerrar sesion</a></li>
+        </ul>
+    </nav>
+
+    <table border="1">
+        <!-- Encabezado de la tabla -->
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Año</th>
+                <th>Director</th>
+                <th>Duración</th>
+                <th>Poster</th>
+                <th>Genero</th>
+                <th>Calificación</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+
+        <!-- Cuerpo de la tabla -->
+        <tbody>
+            <% peliculas.forEach(pelicula=>{ %>
+                <tr>
+                    <td>
+                        <%=pelicula.id %>
+                    </td>
+                    <td>
+                        <%=pelicula.titulo %>
+                    </td>
+                    <td>
+                        <%=pelicula.anio %>
+                    </td>
+                    <td>
+                        <%=pelicula.director %>
+                    </td>
+                    <td>
+                        <%=pelicula.duracion %>
+                    </td>
+                    <td>
+                        <%=pelicula.poster %>
+                    </td>
+                    <td>
+                        <%=pelicula.genero %>
+                    </td>
+                    <td>
+                        <%=pelicula.calificacion %>
+                    </td>
+                    <td>
+                        <form action="http://localhost:3001/eliminar" method="post">
+                            <input type="hidden" id="peliculaId" name="peliculaId" value="<%=pelicula.id %>">
+                            <input type="submit" value="eliminar" id="eliminarr">
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+                    <!-- Agrega más filas según sea necesario -->
+        </tbody>
+    </table>
+
+
+    <!-- <main>
+        <% peliculas.forEach(pelicula=> { %>
+            <article data-id="<%= pelicula.id %>">
+                <h2>
+                    <%= pelicula.titulo %>
+                </h2>
+                <img src="<%= pelicula.poster %>">
+                <p>
+                    <%= pelicula.anio %>
+                </p>
+
+            </article>
+            <% }); %>
+    </main> -->
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crearPelicula.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <button><a href="/">volver al home</a></button>
+        <h1>Crear pelicula</h1>
+        <form action="http://localhost:3001/pelicula-creada" method="post">
+            <section>
+                <label for="id">id:</label>
+                <input type="text" name="id" id="id" required>
+            </section>
+
+            <section>
+                <label for="Nombre">titulo:</label>
+                <input type="text" name="titulo" id="titulo" required>
+            </section>
+
+            <section>
+                <label for="año">Año:</label>
+                <input type="text" name="anio" id="año" required>
+
+            </section>
+
+            <section>
+                <label for="director">Director:</label>
+                <input type="text" name="director" id="director" required>
+            </section>
+
+            <section>
+                <label for="duracion">Duración:</label>
+                <input type="text" name="duracion" id="duracion" required>
+            </section>
+
+            <section>
+                <label for="poster">Poster:</label>
+                <input type="text" name="poster" id="poster" required>
+            </section>
+
+            <section>
+                <label for="calificación">Calificación:</label>
+                <input type="text" name="calificacion" id="calificación" required>
+            </section>
+
+            <section>
+                <label for="genero">genero:</label>
+                <input type="text" name="genero" id="genero" required>
+            </section>
+            <input type="submit" value="Crear" id="registro">
+        </form>
+    </main>
+</body>
+
+</html>
